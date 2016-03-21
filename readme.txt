@@ -1,4 +1,4 @@
-=== VM ===
+=== VM PDF Embeder ===
 Contributors: yosefeliezrie, voilamedia
 Tags: pdf embed, document embed
 Requires at least: 3.5.0
