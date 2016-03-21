@@ -72,6 +72,7 @@ if ( class_exists('acf')){
   }
 }
 
+// Function to get a pdf attachment from the current post ID
 function vm_get_pdf_attachments() {
   $attachment_args = array( 'post_mime_type' => 'application/pdf', 'post_type' => 'attachment', 'numberposts' => 1, 'post_status' => null, 'post_parent' => get_the_id() );
   $attachments = get_posts($attachment_args);
@@ -94,13 +95,17 @@ function vm_pdf_embeder_shortcode( $atts ) {
 		), $atts )
 	);
 
+
+// Grab the URL from the third_party_document advanced-custom-field - field
+$third_party_document = get_field( "third_party_document", get_the_id() );
+
+// Check if there is a PDF attached to the current post
   if ( vm_get_pdf_attachments() ) {
     $uploaded_document = vm_get_pdf_attachments();
+  // Otherwise check there is anything uploaded the the uploaded_document advanced-custom-field - field and Grab the URL from there
   } else {
     $uploaded_document = get_field( "uploaded_document", get_the_id() );
   }
-
-  $third_party_document = get_field( "third_party_document", get_the_id() );
 
   if ($uploaded_document) {
     $document_embed = $uploaded_document;
@@ -113,9 +118,10 @@ function vm_pdf_embeder_shortcode( $atts ) {
   } elseif ( (!$height ) ){
     $height = "1000px";
   }
-
+  // If there is a valid PDF embed than go ahead otherwise return false
   if ($document_embed) {
-    $document_embed_html = '<div class="vm-document-embed">';
+    // Important: make sure type is "application/pdf" otherwise there will be issues
+    $document_embed_html = '<div class="vm-pdf-embeder">';
       $document_embed_html .= '<embed
       width="' . $width . '"
   		height="' . $height . '"
