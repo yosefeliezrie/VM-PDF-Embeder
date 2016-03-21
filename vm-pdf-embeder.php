@@ -9,10 +9,9 @@ Author URI: http://yosefeliezrie.com
 License: GPL
 Copyright: Yosef Eliezrie
 */
-/*if ( class_exists('acf')){
-} else {
-  echo "This plugin will only work with the Advanced Custom Fields Plugin Active, please add it from the repo https://wordpress.org/plugins/advanced-custom-fields/";
-}*/
+
+if ( class_exists('acf')){
+
 // Regsiter field group to store url of PDF
   if(function_exists("register_field_group")) {
   	register_field_group(array (
@@ -70,6 +69,7 @@ Copyright: Yosef Eliezrie
   		),
   		'menu_order' => 0,
   	));
+  }
 }
 
 function vm_get_pdf_attachments() {
@@ -131,4 +131,4 @@ function vm_pdf_embeder_shortcode( $atts ) {
   }
 
 }
-add_shortcode( 'vm_pdf_embeder', 'vm_document_embed_shortcode' );
+add_shortcode( 'vm_pdf_embeder', 'vm_pdf_embeder_shortcode' );
