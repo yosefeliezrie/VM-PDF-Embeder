@@ -21,7 +21,7 @@ This Plugin allows you to embed PDF\'s using modern browsers\' default pdf embed
 4 Activate the plugin through the \"Plugins\" menu in WordPress.
 6. Add the [vm_pdf_embeder width=”” height=”” src=””] to your post/page or to theme/plugin.
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
 ## Usage
 * To add to an individual post: Add [vm_document_embed} shortcode to your post using the following syntax:
