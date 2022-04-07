@@ -17,7 +17,7 @@ This Plugin allows you to embed PDF\'s using modern browsers\' default pdf embed
 ## Installation
 1. Ensure you have the advanced custom fields plugin installed and activated https://wordpress.org/plugins/advanced-custom-fields/
 2. Upload the vm-pdf-embed folder to your directory
-3. Upload "vm-pdf-embed" folder to the \"/wp-content/plugins/\" directory.
+3. Upload "vm-pdf-embed" folder to the \"wp-content/plugins/" directory.
 4 Activate the plugin through the \"Plugins\" menu in WordPress.
 6. Add the [vm_pdf_embeder width=”” height=”” src=””] to your post/page or to theme/plugin.
 
