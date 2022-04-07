@@ -24,7 +24,7 @@ This Plugin allows you to embed PDF\'s using modern browsers\' default pdf embed
 ## Frequently Asked Questions
 
 ## Usage
-* To add to an individual post: Add [vm_document_embed} shortcode to your post using the following syntax:
+* To add to an individual post: Add [vm_document_embed] shortcode to your post using the following syntax:
 [vm_pdf_embeder width=\"\" height=\"\" src=\"\"]
 *  You can add this functionality to your theme using do_shortcode('[vm_pdf_embeder width=”” height=”” src=””]')
 
